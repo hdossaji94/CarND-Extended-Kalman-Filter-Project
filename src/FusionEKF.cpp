@@ -88,9 +88,9 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
       Convert radar from polar to cartesian coordinates and initialize state.
       */
 
-      double rho = measurement_pack.raw_measurements_(0);
-      double phi = measurement_pack.raw_measurements_(1);
-      double rhodot = measurement_pack.raw_measurements_(2);
+      float rho = measurement_pack.raw_measurements_(0);
+      float phi = measurement_pack.raw_measurements_(1);
+      float rhodot = measurement_pack.raw_measurements_(2);
 
       ekf_.x_ << rho * cos(phi), rho * sin(phi), rhodot * cos(phi), rhodot * sin(phi);
     }
