@@ -1,5 +1,6 @@
 #ifndef KALMAN_FILTER_H_
 #define KALMAN_FILTER_H_
+#define PI 3.14159265
 #include "Eigen/Dense"
 
 class KalmanFilter {
